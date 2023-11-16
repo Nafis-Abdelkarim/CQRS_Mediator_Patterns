@@ -22,7 +22,7 @@
     protected override async Task OnInitializedAsync()
     {
         people = await _mediator.Send(new GetPersonListQuery());
-        firstPerson = await _mediator.Send(new GetPersonQuery());
+        firstPerson = await _mediator.Send(new GetPersonByIdQuery());
     }
 
 }
